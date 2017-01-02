@@ -18,7 +18,9 @@ Lorsqu'un internaute arrive sur votre site en HTTP, c'est simple :
 
 Facile ;) !
 
-Mais voilà, en HTTPS, les choses ne sont pas si simples. La page de [wikipedia](https://fr.wikipedia.org/wiki/Autorit%C3%A9_de_certification) est plutôt claire sur le sujet. En voici les grandes lignes :
+Mais voilà, en HTTPS, les choses ne sont pas si simples. La page de [wikipedia](https://fr.wikipedia.org/wiki/Autorit%C3%A9_de_certification) est plutôt claire sur le sujet. 
+
+En voici les grandes lignes :
 * Les navigateurs possèdent nativement la liste des autorités de certifications et leurs certificats respectifs
 * Lorsqu'un client souhaite se connecter en HTTPS, le serveur lui transmet son certificat, qui contient le CSR (demande de certificat) chiffré par l'autorité choisie par le webmaster.
 * Le navigateur, possédant les certificats des autorités, s'assure qu'une des clés publiques permet bien de déchiffrer le CSR. Il s'assure ainsi que le certificat est bien issu d'un tiers de confiance.
@@ -27,5 +29,12 @@ Mais voilà, en HTTPS, les choses ne sont pas si simples. La page de [wikipedia]
 * Le serveur reçoit chiffrée qu'il déchiffre à l'aide de sa clé privée
 * Le serveur interprète la requête HTTP, construit une réponse qu'il chiffre à nouveau avec sa clé privée et l'envoie au client
 * Le client déchiffre la requête avec la clé publique ? PB : tout le monde peut déchiffrer le contenu de retour
+
+# La naissance de lets'encrypt
+Le coût exhorbitant d'un certicat de sécurité est un frein à la généralisation du HTTPS sur Internet. Let's encrypt est la première autorité de certification a délivrer des certificats GRATUITEMENT. Le projet est soutenu par de très nombreux acteurs de la sécurité et du monde du logiciel libre.
+
+Alors voilà, comment ça se passe.
+
+
 
 
